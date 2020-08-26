@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>  
+</head>
+<body>  
+  <article id="first-article" >
+    <h3 class="title">article-1</h3>
+    <p class="author">author-1</p>
+    <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis asperiores nostrum laboriosam totam molestias atque amet minima eligendi. A dignissimos reiciendis veritatis qui maiores ducimus unde quibusdam fuga optio? Fugiat?</p>
+  </article>
+  <article class="special">
+    <h3 class="title">article-2</h3>
+    <p class="author">author-2</p>
+    <p class="description">Assumenda obcaecati velit commodi incidunt quo dicta libero praesentium mollitia impedit atque numquam sunt maxime culpa, laudantium, quos pariatur error nam placeat itaque. Velit libero, ipsam sint laborum dolores fugit.</p>
+  </article>
+  <article class="special">
+    <h3 class="title">article-3</h3>
+    <p class="author">author-3</p>
+    <p class="description">Laboriosam veniam voluptatibus vero architecto, unde provident qui repellat sequi voluptate culpa sit quisquam optio voluptas non illum quae facere quam iusto accusantium explicabo officiis. Voluptates voluptatibus cupiditate magnam ipsam.</p>
+  </article>
+  <article>
+    <h3>Grocery List</h3>
+    <ul id='gift-list'>
+      <li>list-1</li>
+      <li>list-2</li>
+      <li>list-3</li>
+      <li>list-4</li>
+      <li>list-5</li>
+    </ul>
+  </article>
+
+  <script>
+    // let authors=document.querySelectorAll('.special h3');
+    const article1=document.getElementById('first-article');
+    const newParagraph=document.createElement('p');
+    newParagraph.innerHTML="this paragraph is added by Javascript";
+    article1.appendChild(newParagraph);
+
+    const otherArticles=document.getElementsByClassName('special');
+    
+    for(let i=0;i<otherArticles.length;i++){
+      let articleElement=otherArticles[i];
+      let aP=document.createElement('h1');
+      aP.innerText="Hello Super Javascript!";
+      articleElement.appendChild(aP);
+      // console.log(articleElement);
+    }
+    const giftList=document.getElementById('gift-list');
+    const gift=document.createElement('li');
+    gift.innerText="list-6";
+    giftList.appendChild(gift);
+
+    // console.log(article1);
+    // console.log(authors);
+    // for(let i=0;i<authors.length;i++){
+    //   let element=authors[i];
+    //   element.innerHTML='Lekhok'+(i+1);
+    //   element.style.backgroundColor='red';
+    //   console.log(element.innerHTML);
+    // }
+  </script>
+</body>
+</html>
